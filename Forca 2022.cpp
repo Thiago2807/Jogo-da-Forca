@@ -7,7 +7,7 @@ using namespace std;
 int main(){
 	setlocale(LC_ALL,"Portuguese");
 
-	int indice = 100, vida = 6, tentativa = 15, qtd_letra = 0, acerto = 0, falha = 0, verificar = 0, verificar_2 = 0, acerto_2 = 0;
+	int indice = 100, tentativa = 15, qtd_letra = 0, acerto = 0, falha = 0, verificar = 0, acerto_2 = 0;
 	char frase[indice], letra[0], frase_correta[indice];
 
 //  Introdução do programa
@@ -39,9 +39,9 @@ int main(){
 		}
 	}
 
- 	while((vida != 0) && (tentativa != 0)){
+ 	while(tentativa != 0){
 // 		Reinicio das variaveis
- 		verificar = 0;verificar_2 = 0; acerto = 0; falha = 0;
+ 		verificar = 0; acerto = 0; falha = 0;
 
 // 		Informa quantas letras tem a palavra digitada
  		cout << " A palavra secreta tem " << qtd_letra << " letras \n";
@@ -49,9 +49,7 @@ int main(){
  		cout << " Você acertou " << acerto_2 << " letras. \n";
  		cout << " ---------------------------------------\n";
 
-// 		Informa a quantidade de vidas e tentativas
- 		cout << " Vidas: " << vida;
- 		cout << "  | ";
+// 		Informa a quantidade de tentativas
  		cout << " Tentativas: " << tentativa << "\n";
 		cout << " ---------------------------------------\n\n";
 
@@ -79,7 +77,6 @@ int main(){
 		if((acerto == 0) && (falha > 0)){
 			cout << " Infelizmente a letra '" << letra[0] << "' não tem na palavra secreta.\n";
 			cout << " ---------------------------------------------------------------\n\n";
-			--vida;
 			system("Pause");
 			system("cls");
 		}
@@ -107,12 +104,6 @@ int main(){
 		
 //      Tirar a quantidade de tentativas
 		tentativa--;
-	}
-	
-	if(vida == 0){
-		cout << " Infelizmente a suas vidas acabaram. \n";
-		cout << " Reinicie o jogo caso queira continuar jogando. \n";
-		cout << " ---------------------------------------\n\n";
 	}
 	if(tentativa == 0){
 		cout << " Infelizmente a suas tentativas acabaram. \n";
