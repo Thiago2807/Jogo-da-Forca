@@ -29,7 +29,7 @@ int main(){
 
 //  Entrada da palavra secreta
 	cout << " Digite a palavra secreta: ";
-	gets(frase);
+	cin >> frase;
 	system("cls");
 
 //	Contar quantas letras tem a palavra
@@ -86,21 +86,14 @@ int main(){
 		else{
 			cout << " A letra '" << letra[0] << "' tem na palavra secreta. \n";
 			cout << " ---------------------------------------------------------------\n\n";
-			cout << "A letra '" << letra[0] << "' está presente " << acerto << "veze(s) na palavra secreta\n";
+			cout << "A letra '" << letra[0] << "' está presente " << acerto << " veze(s) na palavra secreta\n";
 			cout << " ---------------------------------------------------------------\n\n";
 			system("Pause");
 			system("cls");
 		}
 		
 		if(acerto_2 == qtd_letra){
-			cout << " Parabéns, você acertou a palavra secreta que é '";
-			
-//			Exibir a palavra secreta
-			while(verificar_2 <= qtd_letra){
-				cout << frase[verificar_2];
-				verificar_2++;
-			}
-			cout << "' \n";
+			cout << " Parabéns, você acertou a palavra secreta que é '" << frase << "' \n";
 			cout << " ---------------------------------------\n\n";
 			
 			system("Pause");
